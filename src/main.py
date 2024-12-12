@@ -6,9 +6,9 @@ from src.model import get_efficientnet_b0, get_criterion_and_optimizer
 from src.utils import calculate_accuracy, save_model_checkpoint
 
 # Paths
-train_path = "/content/drive/My Drive/RetinalFundusImages/Retinal Fundus Images/train"
-val_path = "/content/drive/My Drive/RetinalFundusImages/Retinal Fundus Images/val"
-save_dir = "/content/drive/My Drive/RetinalFundusModels"
+train_path = "../data/train"
+val_path = "../data/val"
+save_dir = "../checkpoints"
 os.makedirs(save_dir, exist_ok=True)
 
 # Data preprocessing
@@ -18,6 +18,7 @@ transform = transforms.Compose([
     transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 ])
 
+# Load datasets
 train_dataset = datasets.ImageFolder(train_path, transform=transform)
 val_dataset = datasets.ImageFolder(val_path, transform=transform)
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True, num_workers=4)

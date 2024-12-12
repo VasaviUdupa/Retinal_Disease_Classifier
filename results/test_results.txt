@@ -1,0 +1,12 @@
+Overall Test Accuracy: 87.70%
+Class 1.Dry AMD Accuracy: 100.00%
+Class 10.Glaucoma Accuracy: 92.95%
+Class 11.Normal Fundus Accuracy: 99.44%
+Class 2.Wet AMD Accuracy: 100.00%
+Class 3.Mild DR Accuracy: 58.82%
+Class 4.Moderate DR Accuracy: 80.56%
+Class 5.Severe DR Accuracy: 83.18%
+Class 6.Proliferate DR Accuracy: 84.62%
+Class 7.Cataract Accuracy: 100.00%
+Class 8.Hypertensive Retinopathy Accuracy: 87.23%
+Class 9.Pathological Myopia Accuracy: 88.24%
