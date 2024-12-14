@@ -78,17 +78,14 @@ python src/main.py --mode test --config src/config.py
 ```
 
 ### **3. Demo Script**
-Use the demo script to test the model on a sample input:
-```bash
-python demo/demo.py
-```
+Use the demo.ipynb file to test the model on a sample input
 
 ---
 
 ## **Expected Output**
-Upon running the demo script, the predictions will be saved to the `demo/demo_outputs/` folder. Example:
-- **Input**: Retinal fundus image from `demo/demo_inputs/`.
-- **Output**: JSON file with predicted class labels and confidence scores.
+Upon running the demo script, the predictions will be saved to the `results/` folder. Example:
+- **Input**: Retinal fundus image from `demo/data/`.
+- **Output**: txt file with predicted class labels and confidence scores.
 
 For test dataset evaluation:
 - Overall Accuracy: **87.22%**
@@ -107,7 +104,7 @@ For test dataset evaluation:
 ---
 
 ## **Pre-trained Model**
-Download the pre-trained model from this [link](https://drive.google.com/example-link).
+Download the pre-trained model from this [link](https://drive.google.com/file/d/1-G-jaO900piAxxhWqXtMdDIxVaPYGAjn/view?usp=drive_link).
 
 Place the model in the `checkpoints/` directory. Use the following snippet to load the model:
 ```python
@@ -119,7 +116,7 @@ model.load_state_dict(torch.load("checkpoints/efficientnet_b0_pretrained.pth"))
 ## **Acknowledgments**
 - Dataset: [Retinal Fundus Images (Kaggle)](https://www.kaggle.com/datasets/kssanjaynithish03/retinal-fundus-images)
 - Pretrained Weights: [EfficientNet-B0 Weights](https://pytorch.org/vision/main/models/generated/torchvision.models.efficientnet_b0.html)
-- Loss Function: [Focal Loss](https://arxiv.org/abs/1708.02002)
+- Loss Function: Cross entropy
 
 Special thanks to the creators of the dataset and the PyTorch community for providing robust tools for deep learning.
 
