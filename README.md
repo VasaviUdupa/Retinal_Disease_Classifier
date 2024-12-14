@@ -68,22 +68,15 @@ Ensure the dataset paths are updated in `src/config.py` if necessary.
 ### **1. Train the Model**
 Run the training script to train EfficientNet-B0:
 ```bash
-python src/main.py --mode train --config src/config.py
+python src/main.py
 ```
 
-### **2. Test the Model**
-Evaluate the trained model on the test dataset:
-```bash
-python src/main.py --mode test --config src/config.py
-```
-
-### **3. Demo Script**
+### **2. Test and Demo Script**
 Use the demo.ipynb file to test the model on a sample input
-
 ---
 
 ## **Expected Output**
-Upon running the demo script, the predictions will be saved to the `results/` folder. Example:
+Upon running the demo.ipynb script, the predictions will be saved to the `results/` folder. Example:
 - **Input**: Retinal fundus image from `demo/data/`.
 - **Output**: txt file with predicted class labels and confidence scores.
 
@@ -121,5 +114,3 @@ model.load_state_dict(torch.load("checkpoints/efficientnet_b0_pretrained.pth"))
 Special thanks to the creators of the dataset and the PyTorch community for providing robust tools for deep learning.
 
 ---
-
-This repository is open to contributions and suggestions. Please raise an issue or open a pull request for any improvements.
